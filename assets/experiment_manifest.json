@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "datasets": {
+    "mosi": {
+      "counts": {
+        "train": 1284,
+        "val": 229,
+        "test": 686
+      },
+      "processed_npz_sha256": {
+        "train": "d21a560c670497c0bc6388ea104666e84f8566a137711026c8bfc02404cf942b",
+        "val": "b4f61c5a70427d001700a0b9379d24b721cf83dea96175eec056dc6b1b9fd30a",
+        "test": "d8f1fcff275cf5eb3264a17bba136f060f90126d50a899110079f90b1a10da05"
+      },
+      "source_sha256": "d3994fd25681f9c7ad6e9c6596a6fe9b4beb85ff7d478ba978b124139002e5f9",
+      "tokenizer_repo": "microsoft/deberta-v3-large",
+      "tokenizer_revision": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "alignment_policy": "Official slow pretokenized SentencePiece over exactly the original BERT-visible raw word spans, including a partially visible final word; all word features unchanged",
+      "runs": [
+        {
+          "seed": 1,
+          "selected_epoch": 11,
+          "checkpoint_sha256": "de4e159d8c16ad9496871347d20d35f7b3dff64016b352c2998d308358f62e0c",
+          "test_prediction_sha256": "90bed802c1e4c5bdac10a29f90fe2872e8d5a608677c29fce9de92c9ba15f5f6",
+          "history_sha256": "d566cc7b361be2ccd5a209d298fb46c2a0619fc3478a6e41feed42b60d072243",
+          "completion_receipt_sha256": "5132e50b1736798c4901d17567712e7f66665c7cde19e82281ff5399b8199a26",
+          "epochs": 20,
+          "updates": 1620,
+          "test_loaded_during_training": false
+        },
+        {
+          "seed": 2,
+          "selected_epoch": 9,
+          "checkpoint_sha256": "8d949bcb15723f20c8c4681cd5fa08e3318ffe8070a54e284a92c183f3781ffa",
+          "test_prediction_sha256": "be4ef25f604fbb8786f19234984f9594bf1f42d1dc9476b755c7fdfa4547f22d",
+          "history_sha256": "97a14e0769638a0ccc7f8f304d4bc1761025bcb5d2e606ebe96895a1033aa58d",
+          "completion_receipt_sha256": "ef14db58664e6505b70ebc6df6af7c353856a0e8442f0b6cb9463cc8109b5051",
+          "epochs": 20,
+          "updates": 1620,
+          "test_loaded_during_training": false
+        },
+        {
+          "seed": 3,
+          "selected_epoch": 7,
+          "checkpoint_sha256": "7176695336ed1da60c08d8e089c17b320fff0313d8bbaf2b5352be1539bf2049",
+          "test_prediction_sha256": "288109239dc7fa9af6cc753c0c577c6f6448468c0e54fa5fdb206ec4aea50193",
+          "history_sha256": "50746e8eb64174919895e3eec298e1769bcf51c4c21aa78da55e444e09488116",
+          "completion_receipt_sha256": "fbcc97c78c178503e54c3c1ae678dc200b429ec59fba48fdcede6470b47d9dbd",
+          "epochs": 20,
+          "updates": 1620,
+          "test_loaded_during_training": false
+        },
+        {
+          "seed": 4,
+          "selected_epoch": 17,
+          "checkpoint_sha256": "49d288d241fe0f02b0fa0b6cc157cdf93484089010e9e522d2fddf185d71249e",
+          "test_prediction_sha256": "15e37a936ff48071a8da875c9bb2dfc1d10a29cc25457f8ac336f7ab5015bf03",
+          "history_sha256": "7d88490ea07f02870be2816a7d8503c9214880c5b7a56e336c8f8cded29003a1",
+          "completion_receipt_sha256": "9f02c880957bc61e6665141c835add475246c30ce6da92604d4b2d2d811cd929",
+          "epochs": 20,
+          "updates": 1620,
+          "test_loaded_during_training": false
+        },
+        {
+          "seed": 5,
+          "selected_epoch": 5,
+          "checkpoint_sha256": "877a5df2aefc72fa77415d6198c0c9b8b3ceeaacb048423f6dc75e39f3168671",
+          "test_prediction_sha256": "eaebc43fc6060e141eb1f1e01e5d9bb75711612db7d3f228c239aa72be856aa1",
+          "history_sha256": "128b1ca657de53702e11f5d4fe1b4038087b0bbcd0974aff881114ceb9c3bb24",
+          "completion_receipt_sha256": "92fb94ddd447a64946cb221918c3ba459f7b8d79fdad30a860931f380be9ea4b",
+          "epochs": 20,
+          "updates": 1620,
+          "test_loaded_during_training": false
+        }
+      ]
+    },
+    "mosei": {
+      "counts": {
+        "train": 16326,
+        "val": 1871,
+        "test": 4659
+      },
+      "processed_npz_sha256": {
+        "train": "1ef140b496f059dd831891ae35f3160b8f911001d4553aaca68525da928db2ab",
+        "val": "d14a75404044b6a41836131c74e827bccbb1af7434e4a1b39e768daa48667acd",
+        "test": "0752915af1053ddefa221090271fe72e15884b27a6dee73667178e2c17aba827"
+      },
+      "source_sha256": "45eccfb748a87c80ecab9bfac29582e7b1466bf6605ff29d3b338a75120bf791",
+      "tokenizer_repo": "microsoft/deberta-v3-large",
+      "tokenizer_revision": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "alignment_policy": "Original BERT-visible raw spans retokenized by official Large slow tokenizer; no extra words",
+      "runs": [
+        {
+          "seed": 1,
+          "selected_epoch": 5,
+          "checkpoint_sha256": "52ca523f5ad95e74224f3e755145ed0886a94cb4e8564f317494c90ca30c01e8",
+          "test_prediction_sha256": "0382e8ec761685f066def10d703cfad00ad0a95f6135b7835916addfa35d140b",
+          "history_sha256": "d19b2677275473759072592c8a96ac7ad00173daf1747afb2632329ef734da70",
+          "completion_receipt_sha256": "e806424ea1948fc92e0f85a4c0ba2d20c5f0bb41f3d9674eb48fd4378bbccb18",
+          "epochs": 20,
+          "updates": 20420,
+          "test_loaded_during_training": false
+        },
+        {
+          "seed": 2,
+          "selected_epoch": 6,
+          "checkpoint_sha256": "8a53f19249f0b503d9b627e2a4c39469e87ede8d91ec898db184700093d2cc59",
+          "test_prediction_sha256": "70787a0e3fb030c42c106159877fd4425d051a64310d8a992c0942463d9fd3d2",
+          "history_sha256": "fe3dddb804b4e41d14affd14c5e6921e713354f1626d576a3e94b7c0c2e6e3cc",
+          "completion_receipt_sha256": "d3b307909ae80f674a458d03874bc191da9c19592c852a9dbe96b2121097026a",
+          "epochs": 20,
+          "updates": 20420,
+          "test_loaded_during_training": false
+        },
+        {
+          "seed": 3,
+          "selected_epoch": 2,
+          "checkpoint_sha256": "0de5b5d5d08c072224d53ef1f13e6c7b073a2bde1df9544188125465a5f7596e",
+          "test_prediction_sha256": "3a3e661fec016c6ba83a7ae94dd17094fa9680ebb33fdd331f314d3ed048c3e6",
+          "history_sha256": "6c622eefd2732fc0bfc6d86f68f8cdc892c81746e5a61c5d073059f7deb00ca0",
+          "completion_receipt_sha256": "c95736ec597cd18d275cf970f3c83d54c81b2fa62d2fd8f95b81b6687c8d6994",
+          "epochs": 20,
+          "updates": 20420,
+          "test_loaded_during_training": false
+        },
+        {
+          "seed": 4,
+          "selected_epoch": 7,
+          "checkpoint_sha256": "c7f9343146f69348ed50ddd9ce83f090e56cf657788b7ef47afb64841089acd2",
+          "test_prediction_sha256": "8fb4b96d8afb88ab99603ac0851f8e99dcabe04675db10462fd3c7a6ee4f4a61",
+          "history_sha256": "2913af8347aa535d43ca28d0182d7304e750656644114eb251d537d5876ec2c6",
+          "completion_receipt_sha256": "75ac345d0e116f3fe54da1232aecfc1c2d2858b7276128be4500ba285593c2e9",
+          "epochs": 20,
+          "updates": 20420,
+          "test_loaded_during_training": false
+        },
+        {
+          "seed": 5,
+          "selected_epoch": 8,
+          "checkpoint_sha256": "265dffe89fad2a21206cf8962a6f50ddf245129ee54708279d894cde7be6749a",
+          "test_prediction_sha256": "43e307a33dd312b645967ae6d35587a0514fca54e7f44b8d2a90975e9a48041a",
+          "history_sha256": "f6ba443a6add04622f101597e99a9d47c66087b7cc4844085e00215bc9d423ed",
+          "completion_receipt_sha256": "f82a990d9c3c671016f93ea433c97718efbc78d7b00af883f42cfb832e7c0233",
+          "epochs": 20,
+          "updates": 20420,
+          "test_loaded_during_training": false
+        }
+      ]
+    },
+    "iemocap": {
+      "counts": {
+        "train": 3311,
+        "val": 1031,
+        "test": 1242
+      },
+      "processed_npz_sha256": {
+        "train": "f0f0356a0634ff396be3d2259b2ad51c443f5b77db9557481b355633c5889596",
+        "val": "bddd0596cf8325fa15a9fecf03367aafb5ecd1dbd1069a53f8f7656c6a65025d",
+        "test": "c5ef4e6a47b53c212d7916243c3f8aa5edfe8e103ca2480797ed0ba9e76e2a8f"
+      },
+      "source_sha256": "18915267dfbb6fa8812c42757b148b143fab35e3fa525c0997763635825eefac",
+      "tokenizer_repo": "microsoft/deberta-v3-large",
+      "tokenizer_revision": "64a8c8eab3e352a784c658aef62be1662607476f",
+      "alignment_policy": "Utterance features with online language encoding",
+      "runs": [
+        {
+          "seed": 1,
+          "selected_epoch": 12,
+          "checkpoint_sha256": "1c58518128ea81bdbedd1cdda895b0fe8d8dacefd5096bba4281e24adf86e8d6",
+          "test_prediction_sha256": "018b72417b8bd860674a3daf52194568abf1a5818e82796bd341ebc7268123a2",
+          "history_sha256": "fcd66708c26fea2637d3cae119408ea01ab88b144f4ea74dc26bc1aa6cbd35da",
+          "completion_receipt_sha256": "6407bcd0912dcc4e394edc33331187d44299585648f2c330b93367be3bff9706",
+          "epochs": 20,
+          "updates": 4140,
+          "test_loaded_during_training": false
+        },
+        {
+          "seed": 2,
+          "selected_epoch": 8,
+          "checkpoint_sha256": "267586571f079b4f65cb6dfc99076885ed5dd57414e9f65d7eb89b72837c6651",
+          "test_prediction_sha256": "b32fa20d56815b93499b8e0e4de98a9e6210ffcdd23953440987a7bffe545d71",
+          "history_sha256": "83427fe8003bea700b825d81e4f5158ec6f67ef6219f7798648f074dc64842e1",
+          "completion_receipt_sha256": "413a27dd2cd4b322d9a9f69953b01ec59beb68d1a4ccfca20ac274a2970451ab",
+          "epochs": 20,
+          "updates": 4140,
+          "test_loaded_during_training": false
+        },
+        {
+          "seed": 3,
+          "selected_epoch": 20,
+          "checkpoint_sha256": "80f3de70479e42f940321c7b7fd9adc19e695e1bc7061a263a8f991d467dcd5d",
+          "test_prediction_sha256": "dcff16256af997f5dc98e07bf3427c5b706b70a689d15c15c94235f4a7fbfd42",
+          "history_sha256": "332c6d315a34de0952152e7e58e3ce0287cb8da9f531e7c7982f3762113e0ba6",
+          "completion_receipt_sha256": "44728cab15fb12c6312e35c36c4051b82bc0917f4c742c00204c46d8c2303914",
+          "epochs": 20,
+          "updates": 4140,
+          "test_loaded_during_training": false
+        },
+        {
+          "seed": 4,
+          "selected_epoch": 13,
+          "checkpoint_sha256": "6bca49e4e10b61632770fade2de3f9f5e6a6630426f1b758910a69429faf319c",
+          "test_prediction_sha256": "5b3bf99f69d58e754355574e93feea4c5d6c25f32d5afcefe8bd5a59efeccf81",
+          "history_sha256": "cf1f2d2ebcc4333d674509de45c5ed8e732ed7cca06f7dd7abe3b46544cf8ac7",
+          "completion_receipt_sha256": "95f2a0f9008ac9f59af68a346cee8ddcb29b0f57f85ca4621e167d9780baabef",
+          "epochs": 20,
+          "updates": 4140,
+          "test_loaded_during_training": false
+        },
+        {
+          "seed": 5,
+          "selected_epoch": 11,
+          "checkpoint_sha256": "6782f091e609b0ceb181ecbd1eb6a030a4872fe5929ac19e10f190e3e7588e20",
+          "test_prediction_sha256": "3937d11f1ff9177d93c0f443d30bafd1270b785d13d0744007791019882b6ad7",
+          "history_sha256": "37606251701879b5a2e7e4df454336b0a6afb32788d93e930b8b99e034858cbb",
+          "completion_receipt_sha256": "50b56338339cf90de405c49caa0ec2def43613b82f382cffa490d7c1e383a969",
+          "epochs": 20,
+          "updates": 4140,
+          "test_loaded_during_training": false
+        }
+      ],
+      "class_names": [
+        "happy_or_excited",
+        "sad",
+        "neutral",
+        "angry"
+      ],
+      "source_label_mapping": {
+        "0": 0,
+        "4": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3
+      },
+      "split_sessions": {
+        "train": [
+          1,
+          2,
+          3
+        ],
+        "val": [
+          4
+        ],
+        "test": [
+          5
+        ]
+      }
+    }
+  },
+  "initialization": {
+    "filename": "sst2_initialization.safetensors",
+    "sha256": "143d2436a0402dfcc4960bcbacc53d83699c2f267b224c944e58c2a1ed6d7365",
+    "bytes": 1740330616,
+    "download_url": null
+  },
+  "encoder": {
+    "repo": "microsoft/deberta-v3-large",
+    "revision": "64a8c8eab3e352a784c658aef62be1662607476f",
+    "original_local_config_sha256": "e1bf1abe70dc5a76092d2f72d986cf113e9331f4d9c61610ebe8ef6a03d1a44f",
+    "original_local_weights_sha256": "7b9a354dd307222ec95fe05ac7240023a72f2511b43852cc0f17daa64b26ff81"
+  },
+  "artifact_availability": "Fingerprints and aggregate numeric records only; no weights, raw/processed inputs or sample predictions are distributed by this manifest."
+}

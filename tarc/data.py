@@ -90,8 +90,13 @@ class FeatureDataset(Dataset):
                     )
                 if "bert_lengths" not in a or a["bert_lengths"].shape != (self.n,):
                     raise ValueError("word-aligned BERT inputs require bert_lengths")
-                if np.any(a["bert_lengths"] < 1) or np.any(
-                    a["bert_lengths"] > token_shape[1]
+                if (
+                    not np.isfinite(a["bert_lengths"]).all()
+                    or not np.equal(
+                        a["bert_lengths"], np.floor(a["bert_lengths"])
+                    ).all()
+                    or np.any(a["bert_lengths"] < 1)
+                    or np.any(a["bert_lengths"] > token_shape[1])
                 ):
                     raise ValueError("Invalid bert_lengths")
                 # Stored unsigned maps cannot represent the required -1 sentinel.
@@ -161,7 +166,14 @@ class FeatureDataset(Dataset):
             if "text_word_index" in a:
                 mapping = a["text_word_index"]
                 for b in range(self.n):
-                    observed = np.unique(mapping[b, mapping[b] >= 0])
+                    length = int(a["bert_lengths"][b])
+                    if np.any(attention[b, length:]) or np.any(
+                        mapping[b, length:] >= 0
+                    ):
+                        raise ValueError(
+                            "Encoder length truncates observed tokens or word mappings"
+                        )
+                    observed = np.unique(mapping[b, :length][mapping[b, :length] >= 0])
                     expected = np.arange(int(content[b].sum()))
                     if not np.array_equal(observed, expected):
                         raise ValueError(

@@ -10,4 +10,8 @@ The upstream encoder model card specifies an MIT license. Upstream software/mode
 licenses apply to their respective components. Dataset use and redistribution
 remain subject to the original dataset terms.
 
-No project code license is specified in this repository.
+The TARC project source code is licensed under the MIT License; see LICENSE.
+The project code license does not grant permission to redistribute datasets,
+third-party feature releases or trained model assets.
+
+Direct dependency and asset-source references are listed in docs/THIRD_PARTY.md.

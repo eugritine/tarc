@@ -1,0 +1,9 @@
+{
+  "python": "3.12.3",
+  "system": "Linux",
+  "machine": "x86_64",
+  "torch": "2.7.1+cpu",
+  "cuda_inference_tested": false,
+  "dependency_record": "Version pins from the validated CPU environment, deduplicated against the imported filelock version; not a wheel-hash lock.",
+  "filelock": "4.2.4"
+}

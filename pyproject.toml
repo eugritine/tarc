@@ -7,6 +7,7 @@ name = "tarc"
 version = "1.0.0"
 description = "Text-Anchored Reliability-Aware Correction for Multimodal Sentiment Analysis"
 readme = "README.md"
+license = {file = "LICENSE"}
 requires-python = ">=3.12"
 keywords = ["multimodal-learning", "sentiment-analysis", "emotion-recognition", "reliability"]
 dependencies = []

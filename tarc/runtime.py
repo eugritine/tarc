@@ -65,48 +65,63 @@ def atomic_checkpoint(path, state):
 
 
 def source_snapshot(output):
+    """Snapshot declared source files without traversing private/output directories."""
     root = Path(__file__).resolve().parents[1]
-    path = Path(output) / "source_snapshot.zip"
-    included = []
-    excluded = {
-        "runs",
-        "data",
-        "__pycache__",
-        ".pytest_cache",
-        "verification",
-        "validation",
-        ".venv",
-        "venv",
-        "env",
-        ".git",
-        "historical",
-        "backups",
-        "node_modules",
-        "dist",
-        "build",
-        ".mypy_cache",
-        ".ruff_cache",
-    }
-    for directory, dirs, names in os.walk(root):
-        dirs[:] = [
-            name
-            for name in dirs
-            if name not in excluded
-            and not name.endswith(".egg-info")
-            and not (Path(directory) / name).is_symlink()
+    manifest = root / "MANIFEST.sha256"
+    if manifest.is_file():
+        names = [line.split("  ", 1)[1] for line in manifest.read_text().splitlines()]
+    else:
+        # Installed wheels carry a distribution file list rather than the source manifest.
+        from importlib.metadata import distribution
+
+        names = [
+            str(entry)
+            for entry in distribution("tarc").files or []
+            if str(entry).startswith("tarc/")
         ]
-        for name in names:
-            p = Path(directory) / name
-            if (
-                p.is_file()
-                and not p.is_symlink()
-                and p.suffix
-                in {".py", ".yaml", ".toml", ".txt", ".json", ".md", ".sh", ".ps1"}
-            ):
-                included.append(p)
-    with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as z:
-        for p in sorted(included):
-            z.write(p, p.relative_to(root))
+    folders = {"tarc", "configs", "scripts", "tests", "docs", ".github"}
+    root_files = {
+        "README.md",
+        "DATA_FORMAT.md",
+        "NOTICE.md",
+        "LICENSE",
+        "pyproject.toml",
+        "requirements-model.txt",
+        "start_demo.py",
+        ".gitignore",
+    }
+    extensions = {".py", ".json", ".toml", ".yaml", ".yml", ".md", ".txt", ".sh"}
+    included = []
+    for name in names:
+        relative = Path(name)
+        if relative.is_absolute() or ".." in relative.parts:
+            raise ValueError("Unsafe source snapshot path")
+        if not (
+            name in root_files
+            or (
+                relative.parts
+                and relative.parts[0] in folders
+                and relative.suffix in extensions
+            )
+        ):
+            continue
+        path = root / relative
+        if any(
+            (root / Path(*relative.parts[:i])).is_symlink()
+            for i in range(1, len(relative.parts) + 1)
+        ):
+            raise ValueError("Source snapshots cannot follow symbolic links")
+        if not path.is_file():
+            raise FileNotFoundError(name)
+        included.append(path)
+    if not included:
+        raise ValueError("No declared source files available for the snapshot")
+    output = Path(output)
+    output.mkdir(parents=True, exist_ok=True)
+    path = output / "source_snapshot.zip"
+    with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as archive:
+        for source in sorted(included):
+            archive.write(source, source.relative_to(root))
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 

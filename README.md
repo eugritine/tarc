@@ -109,3 +109,18 @@ published with the included GitHub Pages workflow.
 
 The language encoder uses [Microsoft DeBERTa](https://github.com/microsoft/DeBERTa)
 through [Transformers](https://github.com/huggingface/transformers).
+
+## Reproduction resources
+
+[Asset fingerprints](assets/experiment_manifest.json) bind each archived result to
+its input split, selected epoch and checkpoint/cache digests. Full numeric validation
+histories are in [results/training_histories.json](results/training_histories.json).
+[Asset preparation](docs/ASSETS.md) describes local verification and encoder setup.
+
+For existing completed runs, `scripts/evaluate_five_seeds.sh` evaluates seeds 1–5
+and aggregates their test metrics. The separate `scripts/recompute_test_table.py`
+checks the original archived prediction caches against their registered fingerprints.
+
+## License
+
+This project's source code is distributed under the [MIT License](LICENSE).

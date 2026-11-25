@@ -106,10 +106,10 @@ def main(argv=None):
     ):
         raise ValueError("Use the recorded validation-selection convention")
     if (
-        not 0 <= settings["missing_probability"] <= 1
+        not 0 <= settings["missing_probability"] < 1
         or not 0 <= settings["warmup_fraction"] <= 1
     ):
-        raise ValueError("Dropout and warmup fractions must be in [0,1]")
+        raise ValueError("Dropout must be in [0,1); warmup must be in [0,1]")
     if (
         min(settings["bert_lr"], settings["tarc_lr"], settings["clip_grad"]) <= 0
         or settings["weight_decay"] < 0
