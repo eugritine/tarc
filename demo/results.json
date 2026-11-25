@@ -1,0 +1,68 @@
+{
+  "split": "test",
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "sample_sd_ddof": 1,
+  "datasets": {
+    "mosi": {
+      "name": "MOSI",
+      "metrics": [
+        {
+          "label": "Acc-2 (%)",
+          "mean": "88.16",
+          "sd": "0.48"
+        },
+        {
+          "label": "W-F1 (%)",
+          "mean": "88.14",
+          "sd": "0.50"
+        },
+        {
+          "label": "MAE",
+          "mean": "0.555",
+          "sd": "0.021"
+        }
+      ]
+    },
+    "mosei": {
+      "name": "MOSEI",
+      "metrics": [
+        {
+          "label": "Acc-2 (%)",
+          "mean": "86.56",
+          "sd": "0.31"
+        },
+        {
+          "label": "W-F1 (%)",
+          "mean": "86.53",
+          "sd": "0.34"
+        },
+        {
+          "label": "MAE",
+          "mean": "0.505",
+          "sd": "0.009"
+        }
+      ]
+    },
+    "iemocap": {
+      "name": "IEMOCAP",
+      "metrics": [
+        {
+          "label": "W-Acc (%)",
+          "mean": "73.67",
+          "sd": "1.14"
+        },
+        {
+          "label": "W-F1 (%)",
+          "mean": "73.86",
+          "sd": "1.08"
+        }
+      ]
+    }
+  }
+}

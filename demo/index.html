@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TARC · Prediction viewer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="TARC home"><span class="brand-mark"><i></i><i></i><i></i></span><strong>TARC</strong><span class="brand-divider"></span><span>Prediction viewer</span></a>
+    <div class="status"><span class="status-dot"></span>Saved model predictions</div>
+  </header>
+  <main class="app">
+    <section class="heading">
+      <div><div class="eyebrow">TEXT-ANCHORED RELIABILITY-AWARE CORRECTION</div><h1>How evidence changes a text prediction</h1><p>Select an example to compare the text anchor, evidence and corrected prediction.</p></div>
+      <button id="download" class="button outline" disabled>Export example ↗</button>
+    </section>
+    <nav class="view-tabs" aria-label="Views">
+      <button class="active" data-view="examples">01  Examples</button>
+      <button data-view="correction">02  Correction</button>
+      <button data-view="results">03  Results</button>
+    </nav>
+    <div id="loading" class="notice">Loading saved predictions...</div>
+    <div id="workspace" hidden>
+      <section class="dataset-tabs" aria-label="Datasets">
+        <button class="active" data-dataset="iemocap">IEMOCAP <small>Four emotions</small></button>
+        <button data-dataset="mosi">MOSI <small>Sentiment</small></button>
+        <button data-dataset="mosei">MOSEI <small>Sentiment</small></button>
+        <span id="cohort" class="cohort"></span>
+      </section>
+      <div id="example-layout" class="layout">
+        <aside class="sidebar panel">
+          <div class="panel-label">Select an example</div>
+          <label class="search"><span>⌕</span><input id="search" type="search" placeholder="Search sample ID" aria-label="Search sample ID"></label>
+          <select id="scenario" aria-label="Filter outcomes"></select>
+          <div id="case-count" class="muted tiny"></div>
+          <div id="case-list" class="case-list" aria-label="Example list"></div>
+          <div class="pagination"><button id="previous" aria-label="Previous page">←</button><span id="page-label"></span><button id="next" aria-label="Next page">→</button></div>
+          <div class="sidebar-note">Representative examples appear first; all validation observations are included. Icons denote classes.</div>
+        </aside>
+        <section class="detail">
+          <div id="sample-header" class="sample-header"></div>
+          <section id="input-panel" class="panel input-panel" hidden><div class="panel-label">Original transcript: local file</div><p id="input-text"></p><div class="muted tiny">Original transcripts are matched by sample ID. The model uses the configured word window; predictions are saved checkpoint outputs.</div></section>
+          <div id="example-view">
+            <div id="predictions" class="prediction-grid"></div>
+            <div class="bottom-grid"><section id="source-panel" class="panel"></section><section id="gate-panel" class="panel"></section></div>
+          </div>
+          <div id="correction-view" hidden><section id="interactive" class="panel"></section></div>
+          <div class="footnote" id="sample-note"></div>
+        </section>
+      </div>
+      <section id="results-view" hidden></section>
+    </div>
+    <footer>Examples use saved validation predictions; the results view shows five-seed test summaries.</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

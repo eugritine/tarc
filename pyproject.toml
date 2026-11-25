@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tarc"
+version = "1.0.0"
+description = "Text-Anchored Reliability-Aware Correction for Multimodal Sentiment Analysis"
+readme = "README.md"
+requires-python = ">=3.12"
+keywords = ["multimodal-learning", "sentiment-analysis", "emotion-recognition", "reliability"]
+dependencies = []
+
+[project.optional-dependencies]
+model = [
+  "torch==2.7.1", "numpy==2.5.4", "transformers==4.57.6",
+  "safetensors==0.8.0", "scipy==1.18.1", "scikit-learn==1.9.1", "PyYAML==6.0.3"
+]
+
+[project.scripts]
+tarc-train = "tarc.train:main"
+tarc-predict = "tarc.predict:main"
+tarc-evaluate = "tarc.evaluate:main"
+tarc-aggregate = "tarc.aggregate:main"
+
+[tool.setuptools.packages.find]
+include = ["tarc", "tarc.*"]
+
+[tool.setuptools.package-data]
+tarc = ["resources/*.json"]

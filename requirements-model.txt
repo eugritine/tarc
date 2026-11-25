@@ -1,0 +1,11 @@
+# Actual model environment verified locally on 2026-11-22, Python 3.12.14.
+# The archived experiments used torch 2.7.1+cu128; choose a matching PyTorch
+# installation for your GPU if needed. The local demo needs none of these.
+torch==2.7.1
+numpy==2.5.4
+transformers==4.57.6
+safetensors==0.8.0
+scipy==1.18.1
+scikit-learn==1.9.1
+PyYAML==6.0.3
+

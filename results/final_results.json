@@ -1,0 +1,252 @@
+{
+  "source": "Archived final-model test evaluations; per-seed metrics and original cache/checkpoint digests.",
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "sample_sd_ddof": 1,
+  "datasets": {
+    "mosi": {
+      "task": "sentiment",
+      "summary_recomputed": {
+        "acc2_including_zero": {
+          "mean": 88.16326530612244,
+          "sample_sd": 0.4768346132302109
+        },
+        "f1_including_zero": {
+          "mean": 88.14346031538159,
+          "sample_sd": 0.5029983819821489
+        },
+        "mae": {
+          "mean": 0.5548620820045471,
+          "sample_sd": 0.020938326462253996
+        }
+      },
+      "class_order": null,
+      "metric_convention": "Nonnegative including y=0 is positive; sample SD ddof1",
+      "runs": [
+        {
+          "seed": 1,
+          "cache_sha256": "90bed802c1e4c5bdac10a29f90fe2872e8d5a608677c29fce9de92c9ba15f5f6",
+          "metrics_recomputed": {
+            "acc2_including_zero": 88.62973760932945,
+            "f1_including_zero": 88.60963806643754,
+            "mae": 0.553433895111084
+          },
+          "selected_epoch": 11,
+          "checkpoint_sha256_from_completed_training": "de4e159d8c16ad9496871347d20d35f7b3dff64016b352c2998d308358f62e0c",
+          "artifact_id": "mosi/seed_1/test_predictions"
+        },
+        {
+          "seed": 2,
+          "cache_sha256": "be4ef25f604fbb8786f19234984f9594bf1f42d1dc9476b755c7fdfa4547f22d",
+          "metrics_recomputed": {
+            "acc2_including_zero": 88.33819241982506,
+            "f1_including_zero": 88.33819241982506,
+            "mae": 0.5385681986808777
+          },
+          "selected_epoch": 9,
+          "checkpoint_sha256_from_completed_training": "8d949bcb15723f20c8c4681cd5fa08e3318ffe8070a54e284a92c183f3781ffa",
+          "artifact_id": "mosi/seed_2/test_predictions"
+        },
+        {
+          "seed": 3,
+          "cache_sha256": "288109239dc7fa9af6cc753c0c577c6f6448468c0e54fa5fdb206ec4aea50193",
+          "metrics_recomputed": {
+            "acc2_including_zero": 87.46355685131195,
+            "f1_including_zero": 87.37281501217403,
+            "mae": 0.5494537949562073
+          },
+          "selected_epoch": 7,
+          "checkpoint_sha256_from_completed_training": "7176695336ed1da60c08d8e089c17b320fff0313d8bbaf2b5352be1539bf2049",
+          "artifact_id": "mosi/seed_3/test_predictions"
+        },
+        {
+          "seed": 4,
+          "cache_sha256": "15e37a936ff48071a8da875c9bb2dfc1d10a29cc25457f8ac336f7ab5015bf03",
+          "metrics_recomputed": {
+            "acc2_including_zero": 88.48396501457727,
+            "f1_including_zero": 88.4783923920444,
+            "mae": 0.5420411229133606
+          },
+          "selected_epoch": 17,
+          "checkpoint_sha256_from_completed_training": "49d288d241fe0f02b0fa0b6cc157cdf93484089010e9e522d2fddf185d71249e",
+          "artifact_id": "mosi/seed_4/test_predictions"
+        },
+        {
+          "seed": 5,
+          "cache_sha256": "eaebc43fc6060e141eb1f1e01e5d9bb75711612db7d3f228c239aa72be856aa1",
+          "metrics_recomputed": {
+            "acc2_including_zero": 87.90087463556851,
+            "f1_including_zero": 87.91826368642694,
+            "mae": 0.590813398361206
+          },
+          "selected_epoch": 5,
+          "checkpoint_sha256_from_completed_training": "877a5df2aefc72fa77415d6198c0c9b8b3ceeaacb048423f6dc75e39f3168671",
+          "artifact_id": "mosi/seed_5/test_predictions"
+        }
+      ]
+    },
+    "mosei": {
+      "task": "sentiment",
+      "summary_recomputed": {
+        "acc2_including_zero": {
+          "mean": 86.5593474994634,
+          "sample_sd": 0.309332490239175
+        },
+        "f1_including_zero": {
+          "mean": 86.53025836493498,
+          "sample_sd": 0.34329120349425546
+        },
+        "mae": {
+          "mean": 0.5053183615207673,
+          "sample_sd": 0.009470077949679854
+        }
+      },
+      "class_order": null,
+      "metric_convention": "Nonnegative including y=0 is positive; sample SD ddof1",
+      "runs": [
+        {
+          "seed": 1,
+          "cache_sha256": "0382e8ec761685f066def10d703cfad00ad0a95f6135b7835916addfa35d140b",
+          "metrics_recomputed": {
+            "acc2_including_zero": 86.88559776776133,
+            "f1_including_zero": 86.88703449878084,
+            "mae": 0.4973762333393097
+          },
+          "selected_epoch": 5,
+          "checkpoint_sha256_from_completed_training": "52ca523f5ad95e74224f3e755145ed0886a94cb4e8564f317494c90ca30c01e8",
+          "artifact_id": "mosei/seed_1/test_predictions"
+        },
+        {
+          "seed": 2,
+          "cache_sha256": "70787a0e3fb030c42c106159877fd4425d051a64310d8a992c0942463d9fd3d2",
+          "metrics_recomputed": {
+            "acc2_including_zero": 86.6709594333548,
+            "f1_including_zero": 86.71803263108822,
+            "mae": 0.4981982707977295
+          },
+          "selected_epoch": 6,
+          "checkpoint_sha256_from_completed_training": "8a53f19249f0b503d9b627e2a4c39469e87ede8d91ec898db184700093d2cc59",
+          "artifact_id": "mosei/seed_2/test_predictions"
+        },
+        {
+          "seed": 3,
+          "cache_sha256": "3a3e661fec016c6ba83a7ae94dd17094fa9680ebb33fdd331f314d3ed048c3e6",
+          "metrics_recomputed": {
+            "acc2_including_zero": 86.22021893110109,
+            "f1_including_zero": 86.0507961959721,
+            "mae": 0.5209453701972961
+          },
+          "selected_epoch": 2,
+          "checkpoint_sha256_from_completed_training": "0de5b5d5d08c072224d53ef1f13e6c7b073a2bde1df9544188125465a5f7596e",
+          "artifact_id": "mosei/seed_3/test_predictions"
+        },
+        {
+          "seed": 4,
+          "cache_sha256": "8fb4b96d8afb88ab99603ac0851f8e99dcabe04675db10462fd3c7a6ee4f4a61",
+          "metrics_recomputed": {
+            "acc2_including_zero": 86.77827860055805,
+            "f1_including_zero": 86.69373058355568,
+            "mae": 0.505580723285675
+          },
+          "selected_epoch": 7,
+          "checkpoint_sha256_from_completed_training": "c7f9343146f69348ed50ddd9ce83f090e56cf657788b7ef47afb64841089acd2",
+          "artifact_id": "mosei/seed_4/test_predictions"
+        },
+        {
+          "seed": 5,
+          "cache_sha256": "43e307a33dd312b645967ae6d35587a0514fca54e7f44b8d2a90975e9a48041a",
+          "metrics_recomputed": {
+            "acc2_including_zero": 86.24168276454175,
+            "f1_including_zero": 86.30169791527803,
+            "mae": 0.5044912099838257
+          },
+          "selected_epoch": 8,
+          "checkpoint_sha256_from_completed_training": "265dffe89fad2a21206cf8962a6f50ddf245129ee54708279d894cde7be6749a",
+          "artifact_id": "mosei/seed_5/test_predictions"
+        }
+      ]
+    },
+    "iemocap": {
+      "task": "classification",
+      "summary_recomputed": {
+        "accuracy": {
+          "mean": 73.67149758454107,
+          "sample_sd": 1.1400806971422146
+        },
+        "weighted_f1": {
+          "mean": 73.85756851869073,
+          "sample_sd": 1.076623140058356
+        }
+      },
+      "class_order": [
+        "happy_or_excited",
+        "sad",
+        "neutral",
+        "angry"
+      ],
+      "metric_convention": "Accuracy and support-weighted F1; sample SD ddof1",
+      "runs": [
+        {
+          "seed": 1,
+          "cache_sha256": "018b72417b8bd860674a3daf52194568abf1a5818e82796bd341ebc7268123a2",
+          "metrics_recomputed": {
+            "accuracy": 74.7987117552335,
+            "weighted_f1": 74.98485141945143
+          },
+          "selected_epoch": 12,
+          "checkpoint_sha256_from_completed_training": "1c58518128ea81bdbedd1cdda895b0fe8d8dacefd5096bba4281e24adf86e8d6",
+          "artifact_id": "iemocap/seed_1/test_predictions"
+        },
+        {
+          "seed": 2,
+          "cache_sha256": "b32fa20d56815b93499b8e0e4de98a9e6210ffcdd23953440987a7bffe545d71",
+          "metrics_recomputed": {
+            "accuracy": 74.7181964573269,
+            "weighted_f1": 74.78031174470348
+          },
+          "selected_epoch": 8,
+          "checkpoint_sha256_from_completed_training": "267586571f079b4f65cb6dfc99076885ed5dd57414e9f65d7eb89b72837c6651",
+          "artifact_id": "iemocap/seed_2/test_predictions"
+        },
+        {
+          "seed": 3,
+          "cache_sha256": "dcff16256af997f5dc98e07bf3427c5b706b70a689d15c15c94235f4a7fbfd42",
+          "metrics_recomputed": {
+            "accuracy": 72.70531400966183,
+            "weighted_f1": 72.84262613936386
+          },
+          "selected_epoch": 20,
+          "checkpoint_sha256_from_completed_training": "80f3de70479e42f940321c7b7fd9adc19e695e1bc7061a263a8f991d467dcd5d",
+          "artifact_id": "iemocap/seed_3/test_predictions"
+        },
+        {
+          "seed": 4,
+          "cache_sha256": "5b3bf99f69d58e754355574e93feea4c5d6c25f32d5afcefe8bd5a59efeccf81",
+          "metrics_recomputed": {
+            "accuracy": 73.83252818035426,
+            "weighted_f1": 74.02866317023631
+          },
+          "selected_epoch": 13,
+          "checkpoint_sha256_from_completed_training": "6bca49e4e10b61632770fade2de3f9f5e6a6630426f1b758910a69429faf319c",
+          "artifact_id": "iemocap/seed_4/test_predictions"
+        },
+        {
+          "seed": 5,
+          "cache_sha256": "3937d11f1ff9177d93c0f443d30bafd1270b785d13d0744007791019882b6ad7",
+          "metrics_recomputed": {
+            "accuracy": 72.30273752012883,
+            "weighted_f1": 72.65139011969853
+          },
+          "selected_epoch": 11,
+          "checkpoint_sha256_from_completed_training": "6782f091e609b0ceb181ecbd1eb6a030a4872fe5929ac19e10f190e3e7588e20",
+          "artifact_id": "iemocap/seed_5/test_predictions"
+        }
+      ]
+    }
+  }
+}
