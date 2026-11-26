@@ -42,9 +42,7 @@ pretrained/
 ```
 
 The text backbone is [DeBERTa-v3-large](https://huggingface.co/microsoft/deberta-v3-large).
-Training also uses a shared SST-2 encoder initialization. The dataset files,
-shared initialization and fine-tuned checkpoints are not included, and download
-links for those assets are not currently available. The original feature and token
+Training also uses a shared SST-2 encoder initialization.  The original feature and token
 alignment specifications are required; generic dataset downloads are not a direct
 replacement. Configuration and split details are in [Reproducibility](docs/REPRODUCIBILITY.md).
 
